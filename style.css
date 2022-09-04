@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 *,
@@ -14,7 +16,6 @@ html {
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* .navbar {
@@ -64,6 +65,10 @@ body {
 
 /* Home */
 
+.home {
+    padding-bottom: 5rem;
+}
+
 .home__text {
     text-align: center;
     max-width: 400px;
@@ -101,9 +106,9 @@ body {
 
 }
 
-.img {
+img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .home__contact {
@@ -111,7 +116,25 @@ body {
     justify-content: center
 }
 
-.button__contact {
-    padding: 10px 60px;
+.home__button {
+    width: 100%;
+    padding: 15px;
     margin-top: 30px;
+    background-color: #8E7BEF;
+    color: #f9f5f2;
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+}
+
+/* Experience */
+
+.experience {
+    background-color: #FCDA68;
+}
+
+.experience__header {
+    margin: 0 auto;
+    padding: 15px 15px;
 }
