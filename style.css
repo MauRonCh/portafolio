@@ -8,11 +8,24 @@ html {
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+    --center: 0 auto;
+    /* colors */
+    --yellow: #fcda68;
+    --violet: #8e7bef;
+
+}
+
 *,
 *::after,
 *::before {
     box-sizing: inherit;
 }
+
+p {
+    margin-block: 0;
+} 
+
 
 body {
     margin: 0;
@@ -39,7 +52,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #8E7BEF;
+    background-color: var(--violet);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -53,8 +66,8 @@ body {
 }
 
 .menu__icon {
-    background-color: #8E7BEF;
-    color: #FCDA68;
+    background-color: var(--violet);
+    color: var(--yellow);
     position: absolute;
     padding: 5px;
     right: 0;
@@ -72,11 +85,11 @@ body {
 .home__text {
     text-align: center;
     max-width: 400px;
-    margin: 0 auto;
+    margin: var(--center);
 }
 
 .text__color{
-    color: #8E7BEF;
+    color: var(--violet);
 }
 
 .text__color2{
@@ -92,7 +105,7 @@ body {
 .home__logo {
     justify-content: center;
     align-items: center;
-    background-color: #8E7BEF;
+    background-color: var(--violet);
     color: #f9f5f2;
     margin: 30px 15px;
     padding: 7px;
@@ -101,7 +114,7 @@ body {
 }
 
 .home__image {
-    margin: 0 auto;
+    margin: var(--center);
     max-width: 225px;
 
 }
@@ -120,7 +133,7 @@ img {
     width: 100%;
     padding: 15px;
     margin-top: 30px;
-    background-color: #8E7BEF;
+    background-color: var(--violet);
     color: #f9f5f2;
     border: none;
     display: flex;
@@ -131,10 +144,51 @@ img {
 /* Experience */
 
 .experience {
-    background-color: #FCDA68;
+    background-color: var(--yellow);
+    padding: 15px 15px;
+    margin: var(--center);
 }
 
 .experience__header {
-    margin: 0 auto;
-    padding: 15px 15px;
+    margin: var(--center);
+    max-width: 400px;
+}
+
+.experience__works {
+    max-width: 400px;
+    margin: var(--center);
+}
+
+.experience__works__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience__works__block > h4 {
+    margin-block: 0;
+}
+
+/* Habilidades */
+
+.experience__habilidades {
+    max-width: 400px;
+    margin: var(--center);
+}
+
+.experience__habilidades__logos {
+
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: 8rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+
+}
+.a > img {
+    width: auto;
+    padding: 0 50px;
+    height: auto;
+    margin: var(--center);
 }
