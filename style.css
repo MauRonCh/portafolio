@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
@@ -185,10 +185,10 @@ body {
     margin: 0 auto;
 }
 .a {
-    padding: 10px 20px 30px
+    padding: 10px 25px 30px;
+    width: 300px;
 }
 .a > p {
-    width: 150px;
     text-align: center;
 }
 
@@ -244,6 +244,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    html {
+        font-size: 25px;
+    }
+    
     h1 {
         font-size: 3em;
         text-align: left;
@@ -266,7 +270,7 @@ body {
     }
 
     img {
-        width: 100%;
+        width: auto;
         height: 100%;
     }
 }
