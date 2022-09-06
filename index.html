@@ -26,19 +26,22 @@
         </div>
     </header>
     <main>
-        <section id='home' class="home">
-            <div class="home__text">
-                <h1>Design experience</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <span class="text__color">+5 años</span> <span class="text__color2">de experiencia</span>
+        <section id='home' class="home width__center">
+            <div class="home__block">
+                <div class="home__text">
+                    <h1>Design experience</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span class="text__color">+5 años</span> <span class="text__color2">de experiencia</span>
+                <div class="home__icons">
+                    <i class='bx bxl-linkedin home__logo'></i>
+                    <i class='bx bxl-instagram-alt home__logo'></i>
+                    <i class='bx bxl-twitter home__logo'></i>
+                </div>
             </div>
-            <div class="home__icons">
-                <i class='bx bxl-linkedin home__logo'></i>
-                <i class='bx bxl-instagram-alt home__logo'></i>
-                <i class='bx bxl-twitter home__logo'></i>
-            </div>
-            <div class="home__image">
-                <img src="images/photo_mobile.png" alt="Piba" class="img">
+
+                <div class="home__image width__center">
+                    <img src="images/photo_mobile.png" alt="Piba" class="home__img">
+                </div>
                 <div class="home__contact">
                     <button class="home__button">
                         <i class='bx bxs-envelope '></i>
@@ -49,64 +52,82 @@
         </section>
 
         <section id="experience" class="experience">
-            <div class="experience__header">
-                <h2>Experiencia y habilidades</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="experience__works">
-                <h3>Experiencia</h3>
-                <div class="experience__works__block">
-                    <p>2016-2018</p>
-                    <h4>Visual designer</h4>
-                    <p>Wizeline</p>
+            <div class="experience__block width__center">
+                <div class="experience__header">
+                    <h2>Experiencia y habilidades</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div class="experience__works__block">
-                    <p>2018-2019</p>
-                    <h4>Visual designer</h4>
-                    <p>Wizeline</p>
+                <div class="experience__works">
+                    <h3>Experiencia</h3>
+                    <div class="experience__works__block">
+                        <p>2016-2018</p>
+                        <h4>Visual designer</h4>
+                        <p>Wizeline</p>
+                    </div>
+                    <div class="experience__works__block">
+                        <p>2018-2019</p>
+                        <h4>Visual designer</h4>
+                        <p>Wizeline</p>
+                    </div>
+                    <div class="experience__works__block">
+                        <p>2019-2018</p>
+                        <h4>Visual designer</h4>
+                        <p>Wizeline</p>
+                    </div>
                 </div>
-                <div class="experience__works__block">
-                    <p>2019-2018</p>
-                    <h4>Visual designer</h4>
-                    <p>Wizeline</p>
-                </div>
-            </div>
-            <div class="experience__habilidades">
-                <h3>Habilidades</h4>
-                <div class="experience__habilidades__logos">
-                    <div class="a">
-                        <img src="./images/icons/mobile.svg" alt="aaaa">
-                        <p> Mobile app design</p>
-                    </div>
-                    <div class="a">
-                        <img src="./images/icons/motion.svg" alt="aaaa">
-                        <p> Motion design</p>
-                    </div>
-                    <div class="a">
-                        <img src="./images/icons/material.svg" alt="aaaa">
-                        <p>Creación y mantenimiento de
-                        sistemas de diseño</p>
-                    </div>
-                    <div class="a">
-                        <img src="./images/icons/design.svg" alt="aaaa">
-                        <p>Gestión de proyectos</p>
-                    </div>
+
+                <div class="experience__habilidades">
+                    <h3>Habilidades</h4>
+                        <div class="experience__habilidades__logos flex">
+                            <div class="a">
+                                <img src="./images/icons/mobile.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <p> Mobile app design</p>
+                            </div>
+                            <div class="a">
+                                <img src="./images/icons/motion.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <p> Motion design</p>
+                            </div>
+                            <div class="a">
+                                <img src="./images/icons/material.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <p>Creación y mantenimiento de
+                                    sistemas de diseño</p>
+                            </div>
+                            <div class="a">
+                                <img src="./images/icons/design.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <p>Gestión de proyectos</p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </section>
-        <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio width__center">
             <h2>Portafolio</h2>
-            <div class="portfolio__block">
-                <h3>Beauty app</h3>
-                <img src="images/ejemplo1.png" alt="example1">
+            <div class="portfolio flex">
+                <div class="portfolio__block">
+                    <h3>Beauty app</h3>
+                    <img src="./images/ejemplo1.png" alt="example1">
+                </div>
+                <div class="portfolio__block">
+                    <h3>Training app</h3>
+                    <img src="./images/ejemplo2.png" alt="example1">
+                </div>
+                <div class="portfolio__block">
+                    <h3>Hotel app</h3>
+                    <img src="./images/ejemplo3.png" alt="example1">
+                </div>
             </div>
-            <div class="portfolio__block">
-                <h3>Training app</h3>
-                <img src="images/ejemplo2.png" alt="example1">
+        </section>
+        <section id="contact" class="contact width__center">
+            <h2>Contacto</h2>
+            <div class="contact__block">
+                <img src="./images/icons/phone.svg" alt="fono">
+                <p>Número celular</p>
+                <span>5523098541</span>
             </div>
-            <div class="portfolio__block">
-                <h3>Hotel app</h3>
-                <img src="images/ejemplo3.png" alt="example1">
+            <div class="contact__block">
+                <img src="./images/icons/mail.svg" alt="mail">
+                <p>Email</p>
+                <span>example@correo.com</span>
             </div>
         </section>
     </main>
