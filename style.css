@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
@@ -20,7 +20,7 @@ html {
     box-sizing: inherit;
 }
 
-p {
+p, h4 {
     margin-block: 0;
 }
 
@@ -39,6 +39,8 @@ h2 {
 
 .flex {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .width__center {
@@ -62,15 +64,11 @@ body {
 } */
 
 .menu {
-    width: 100%;
     height: 100%;
 }
 
 .menu__list {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: var(--violet);
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -114,18 +112,13 @@ body {
 }
 
 .home__icons {
-    display: flex;
-    justify-content: center;
-    text-align: center;
     flex-wrap: wrap;
 }
 
 .home__logo {
-    justify-content: center;
-    align-items: center;
     background-color: var(--violet);
     color: #f9f5f2;
-    margin: 30px 15px;
+    margin: 15px;
     padding: 7px;
     border-radius: 25px;
     font-size: 20px;
@@ -134,6 +127,9 @@ body {
 .home__img {
     margin: 0 auto;
     display: block;
+    width: 50%;
+    height: 50%;
+    min-width: 150px;
 }
 
 .home__contact {
@@ -150,7 +146,8 @@ body {
     border: none;
     display: flex;
     justify-content: space-evenly;
-    font-size: 16px;
+    align-items: center;
+    font-size: 20px;
 }
 
 /* Experience */
@@ -159,16 +156,19 @@ body {
     background-color: var(--yellow);
     padding: 15px 15px;
 }
-
-
 .experience__works__block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    justify-items: center;
 }
 
-.experience__works__block>h4 {
-    margin-block: 0;
+.experience__works__block__text {
+    padding: 20px;
+    border-bottom: 3px solid black;
+    width: 90%;
 }
+
 
 /* Habilidades */
 
@@ -229,12 +229,12 @@ body {
 
 .contact__block {
     padding-top: 50px;
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
     text-align: center;
 }
 
-.contact>h2 {
+.contact > h2 {
     width: 100%;
 }
 
@@ -244,24 +244,23 @@ body {
 }
 
 @media (min-width: 768px) {
-    html {
-        font-size: 25px;
-    }
-    
     h1 {
         font-size: 3em;
         text-align: left;
     }
-
+    /* home */
     .home__block {
         display: grid;
         grid-template-columns: 2fr 3fr;
         grid-template-rows: 5fr 1fr;
     }
 
-    .home__image {
+    #img {
         grid-column: 3 / 2;
         grid-row: 1 / 4;
+        width: 100%;
+        height: 100%;
+        padding-left: 80px;
     }
 
     .home__text {
@@ -272,5 +271,21 @@ body {
     img {
         width: auto;
         height: 100%;
+    }
+    /* experience */
+    .experience__block {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .experience__works {
+        width: 75%;
+        margin: 0 auto;
+    }
+    
+    .experience__habilidades {
+        grid-column: 1 / -1;
     }
 }
