@@ -6,6 +6,7 @@ html {
     font-weight: 400;
     line-height: 1.5;
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -20,7 +21,8 @@ html {
     box-sizing: inherit;
 }
 
-p, h4 {
+p,
+h4 {
     margin-block: 0;
 }
 
@@ -35,6 +37,15 @@ h2 {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    /* color: white; */
+}
+
+main {
+    overflow: hidden;
+}
+
 /* utilities */
 
 .flex {
@@ -44,7 +55,7 @@ h2 {
 }
 
 .width__center {
-    max-width: 1200px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -52,30 +63,86 @@ body {
     margin: 0;
 }
 
-/* .navbar {
-    position: styick;
-    top: 0;
-    background-color: rgb(255, 255, 255);
+.header {
     width: 100%;
-} */
+    margin: 0 auto;
+    position: fixed;
+}
 
-/* .navbar__container {
+.navbar {
     position: relative;
-} */
+    width: 100%;
+    padding-top: 1rem;
+    z-index: 2;
+    font-size: larger;
+}
 
 .menu {
     height: 100%;
+    width: 100%;
+}
+
+.bar {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    font-size: x-large;
+    padding: 1rem 0;
+    box-shadow: 0px 0px 10px#423F40;
+    z-index: 1;
 }
 
 .menu__list {
-    flex-direction: column;
-    background-color: var(--violet);
+    text-align: center;
+    row-gap: 0.75rem;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
+@media screen and (max-width: 767px) {
+    .bar {
+        display: none;
+    }
+    
+    .menu__list {
+        position: fixed;
+        top: 0%;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        width: 100%;
+        height: 40vh;
+        background-color: var(--violet);
+        font-size: larger;
+        transition: ease 0.3s;
+        z-index: 5;
+    }
+
+    #menu_close {
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: .5rem;
+        z-index: 10;
+    }
+
+    #menu_open {
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        z-index: 4;
+    }
+}
+.menu--close {
+    top: -100%; 
+}
+
+
 .menu__link {
-    padding: .5rem;
+    padding: .5rem .5rem;
     font-weight: 700;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -85,18 +152,20 @@ body {
 .menu__icon {
     background-color: var(--violet);
     color: var(--yellow);
-    position: absolute;
     padding: 5px;
-    right: 0;
-    display: inline-block;
-    font-size: x-large;
+    font-size: xx-large;
     border-radius: 20px;
+}
+
+.menu__toggle,
+.menu__close {
+    display: none;
 }
 
 /* Home */
 
 .home {
-    padding: 5rem 20px;
+    padding: 1rem 20px;
 }
 
 .home__text {
@@ -120,8 +189,14 @@ body {
     color: #f9f5f2;
     margin: 15px;
     padding: 7px;
-    border-radius: 25px;
+    border-radius: 50%;
     font-size: 20px;
+}
+
+.home__logo:hover {
+    color: var(--yellow);
+    box-shadow: 0px 0px 10px #646061;
+    transition: ease 0.5s;
 }
 
 .home__img {
@@ -142,20 +217,28 @@ body {
     padding: 15px;
     margin-top: 30px;
     background-color: var(--violet);
-    color: #f9f5f2;
+    color: white;
     border: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     font-size: 20px;
+
+}
+
+button:hover {
+    color: var(--yellow);
+    box-shadow: 0px 0px 10px #646061;
+    transition: ease 0.5s;    
 }
 
 /* Experience */
 
 .experience {
     background-color: var(--yellow);
-    padding: 15px 15px;
+    padding: 80px 15px;
 }
+
 .experience__works__block {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -184,11 +267,13 @@ body {
     height: auto;
     margin: 0 auto;
 }
+
 .a {
     padding: 10px 25px 30px;
     width: 300px;
 }
-.a > p {
+
+.a>p {
     text-align: center;
 }
 
@@ -197,6 +282,7 @@ body {
 
 .portfolio {
     padding: 20px;
+    padding-top: 80px;
     background-color: white;
     justify-content: center;
     flex-wrap: wrap;
@@ -234,7 +320,7 @@ body {
     text-align: center;
 }
 
-.contact > h2 {
+.contact>h2 {
     width: 100%;
 }
 
@@ -248,7 +334,13 @@ body {
         font-size: 3em;
         text-align: left;
     }
+
     /* home */
+
+    .home {
+        padding-top: 5rem;
+    }
+
     .home__block {
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -272,6 +364,7 @@ body {
         width: auto;
         height: 100%;
     }
+
     /* experience */
     .experience__block {
         display: grid;
@@ -284,8 +377,14 @@ body {
         width: 75%;
         margin: 0 auto;
     }
-    
+
     .experience__habilidades {
         grid-column: 1 / -1;
     }
+}
+
+footer {
+    padding: 5rem;
+    text-align: center;
+    font-size: 2rem;
 }

@@ -11,18 +11,23 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="navbar__container">
-            <div id="menu" class="menu">
-                <i id="menu_close" class="bx bx-x menu__icon menu--close"> </i>
-                <nav class="menu__list flex">
+    <header class="header">
+        <div class="bar"></div>
+        <div class="navbar flex width__center">
+            <div class="menu">
+                <nav id="menu" class="menu__list flex menu--close">
                     <a href="#home" class="menu__link">Home</a>
-                    <a href="#experience" class="menu__link">Experiencias y habilidades</a>
+                    <a href="#experience" class="menu__link">Experiencia y habilidades</a>
                     <a href="#portfolio" class="menu__link">Portafolio</a>
                     <a href="#contact" class="menu__link">Contacto</a>
+                    <div id="menu_close" class="menu__close">
+                        <i id="menu_close" class="bx bx-x menu__icon menu--close"> </i>
+                    </div>
                 </nav>
             </div>
-            <i id='menu_open' class='bx bx-menu menu__icon menu--open'></i>
+            <div class="menu__toggle" id='menu_open'>
+                <i class='bx bx-menu menu__icon'></i>
+            </div>
         </div>
     </header>
     <main>
@@ -32,20 +37,26 @@
                     <h1>Design experience</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elite.</p>
                     <br><span class="text__color">+5 años</span> <span class="text__color2">de experiencia</span>
-                <div class="home__icons flex">
-                    <i class='bx bxl-linkedin home__logo flex'></i>
-                    <i class='bx bxl-instagram-alt home__logo flex'></i>
-                    <i class='bx bxl-twitter home__logo flex'></i>
+                    <div class="home__icons flex">
+                        <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer"> <i
+                                class='bx bxl-linkedin home__logo flex'></i>
+                        </a>
+                        <a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer"> <i
+                                class='bx bxl-instagram-alt home__logo flex'></i>
+                        </a>
+                        <a href="http://www.twitter.com" target="_blank" rel="noopener noreferrer"> <i
+                                class='bx bxl-twitter home__logo flex'></i>
+                        </a>
+
+                    </div>
                 </div>
-            </div>
 
                 <div class="home__image width__center">
                     <img src="images/photo_mobile.png" alt="Piba" class="home__img" id="img">
                 </div>
                 <div class="home__contact">
-                    <button class="home__button">
-                        <i class='bx bxs-envelope '></i>
-                        Contáctame
+                    <button class="home__button"><i class='bx bxs-envelope'></i>ㅤContáctame
+                        <a href="#contact"></a>
                     </button>
                 </div>
             </div>
@@ -71,7 +82,7 @@
                         <div class="experience__works__block__text">
                             <h4>Product designer</h4>
                             <p>Microsoft</p>
-                        </div> 
+                        </div>
                     </div>
                     <div class="experience__works__block">
                         <p>2019-2021</p>
@@ -86,20 +97,24 @@
                     <h3>Habilidades</h4>
                         <div class="experience__habilidades__logos flex">
                             <div class="a">
-                                <img src="./images/icons/mobile.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <img src="./images/icons/mobile.svg" alt="aaaa"
+                                    class="experience__habilidades__logos__img">
                                 <p> Mobile app design</p>
                             </div>
                             <div class="a">
-                                <img src="./images/icons/motion.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <img src="./images/icons/motion.svg" alt="aaaa"
+                                    class="experience__habilidades__logos__img">
                                 <p> Motion design</p>
                             </div>
                             <div class="a">
-                                <img src="./images/icons/material.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <img src="./images/icons/material.svg" alt="aaaa"
+                                    class="experience__habilidades__logos__img">
                                 <p>Creación y mantenimiento de
                                     sistemas de diseño</p>
                             </div>
                             <div class="a">
-                                <img src="./images/icons/design.svg" alt="aaaa" class="experience__habilidades__logos__img">
+                                <img src="./images/icons/design.svg" alt="aaaa"
+                                    class="experience__habilidades__logos__img">
                                 <p>Gestión de proyectos</p>
                             </div>
                         </div>
@@ -137,5 +152,8 @@
             </div>
         </section>
     </main>
+    <script src="./main.js"></script>
 </body>
+<footer>Me desvelé 2 días haciendo, pero hecho con amor xd </footer>
+
 </html>
